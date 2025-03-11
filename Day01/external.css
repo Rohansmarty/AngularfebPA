@@ -1,0 +1,17 @@
+/*h1,h2,h3{
+    color:purple;
+    font-weight:bold;
+}*/
+/*body{
+    background:rgb(255, 196, 0);
+}*/
+
+div 
+h1,h2,h3{
+    color:purple;
+    font-weight:bold;
+}
+
+#third-header{
+    color:red;
+}
