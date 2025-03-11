@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functions Demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <script>
+        // Console Functions
+        console.log("This is a log message.");
+        console.error("This is an error message.");
+        console.assert(5 > 10, "Assertion failed: 5 is not greater than 10");
+        console.table([{ name: "Alice", age: 25 }, 
+        { name: "Bob", age: 30 }]);
+        console.time("Timer"); // Start Timer
+        console.timeEnd("Timer"); // End Timer
+        console.trace("Trace example");
+        console.dir(document);
+
+        // Window Functions
+        alert("Welcome to JavaScript Demo!");
+        let userName = prompt("Enter your name:");
+        let isConfirmed = confirm("Do you want to proceed?");
+        
+        // Document Write (Not Recommended)
+        document.write(`<h2>Hello, ${userName || "Guest"}!</h2>`);
+        document.write(`<p>Confirmation Status: ${isConfirmed ? "Accepted" : "Declined"}</p>`);
+
+        // Math Functions
+        let num1 = Number(prompt("Enter first number:"));
+        let num2 = Number(prompt("Enter second number:"));
+        
+        document.write(`<p>Max: ${Math.max(num1, num2)}</p>`);
+        document.write(`<p>Min: ${Math.min(num1, num2)}</p>`);
+        document.write(`<p>Square Root of ${num1}: ${Math.sqrt(num1)}</p>`);
+        document.write(`<p>Square Root of ${num2}: ${Math.sqrt(num2)}</p>`);
+    </script>
+</head>
+<body>
+     
+    <h1>Bootstrap Images</h1>
+    <img src="https://www.gurucool.life/_next/image?url=https%3A%2F%2Fdrive.gurucool.life%2Fguru-wallpaper%2Fkrishna2025.jpg&w=3840&q=75"
+        alt="" width="300" height="300">
+    <img src="https://www.gurucool.life/_next/image?url=https%3A%2F%2Fdrive.gurucool.life%2Fguru-wallpaper%2Fkrishna2025.jpg&w=3840&q=75"
+        alt="" width="300" height="300" class="img">
+    <img src="https://www.gurucool.life/_next/image?url=https%3A%2F%2Fdrive.gurucool.life%2Fguru-wallpaper%2Fkrishna2025.jpg&w=3840&q=75"
+        alt="" width="300" height="300" class="rounded mx-1">
+    <img src="https://www.gurucool.life/_next/image?url=https%3A%2F%2Fdrive.gurucool.life%2Fguru-wallpaper%2Fkrishna2025.jpg&w=3840&q=75"
+        alt="" width="300" height="300" class="rounded-circle mx-1">
+    <hr />
+
+    <h1>Bootstrap Buttons</h1>
+    <button>HTML Button</button>
+    <button class="btn btn-primary">Primary Button</button>
+    <button class="btn btn-secondary">secondary Button</button>
+    <button class="btn btn-success">Success Button</button>
+    <button class="btn btn-warning">warning Button</button>
+    <button class="btn btn-danger">danger Button</button>
+    <button class="btn btn-info">info Button</button>
+</body>
+</html>
