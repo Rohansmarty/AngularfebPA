@@ -7,7 +7,9 @@ h1,h2,h3{
 }*/
 
 div 
-
+#pagetitle{
+    text-align: center;
+}
 
 #third-header{
     color:red;
