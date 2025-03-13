@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Scope & TDZ Demo</title>
+</head>
+<body>
+    <h1>Open the Console (F12) to See the Output</h1>
+    <button onclick="runTests()">Run JavaScript Tests</button>
+
+    <script>
+        function runTests() {
+            console.log("🚀 Running JavaScript Tests...");
+
+            // 1️⃣ Global Scope
+            var globalVar = "I am a global variable!";
+            let globalLet = "I am also global!";
+            const globalConst = "I am a constant global variable!";
+
+            console.log(globalVar);  // ✅ Works
+            console.log(globalLet);  // ✅ Works
+            console.log(globalConst); // ✅ Works
+
+            // 2️⃣ Function Scope
+            function testScope() {
+                var functionVar = "I am inside a function!";
+                let functionLet = "I am also inside a function!";
+                const functionConst = "I am a constant inside a function!";
+
+                console.log(functionVar);  // ✅ Works
+                console.log(functionLet);  // ✅ Works
+                console.log(functionConst); // ✅ Works
+            }
+            testScope();
+
+            // Uncommenting this will cause an error:
+            // console.log(functionVar);  // ❌ ReferenceError (function scope)
+            // console.log(functionLet);  // ❌ ReferenceError (function scope)
+            // console.log(functionConst); // ❌ ReferenceError (function scope)
+
+            // 3️⃣ Block Scope
+            if (true) {
+                var blockVar = "I escape the block!";
+                let blockLet = "I am inside the block!";
+                const blockConst = "I am also inside the block!";
+            }
+
+            console.log(blockVar);  // ✅ Works (Bad! `var` leaks out of the block)
+            // console.log(blockLet);  // ❌ ReferenceError (block scope)
+            // console.log(blockConst); // ❌ ReferenceError (block scope)
+
+            // 4️⃣ Hoisting with var (initialized as undefined)
+            console.log(hoistedVar);  // ✅ undefined (Bad!)
+            var hoistedVar = "I am hoisted!";
+
+            // 5️⃣ Hoisting with let & const (TDZ Error)
+            // console.log(hoistedLet);  // ❌ ReferenceError (TDZ)
+            let hoistedLet = "I am NOT accessible before declaration!";
+
+            // console.log(hoistedConst); // ❌ ReferenceError (TDZ)
+            const hoistedConst = "I am also NOT accessible before declaration!";
+
+            // 6️⃣ Temporal Dead Zone (TDZ)
+            function testTDZ() {
+                // console.log(tdzVar); // ❌ ReferenceError (TDZ)
+                let tdzVar = "I exist only after this line!";
+                console.log(tdzVar); // ✅ Works
+            }
+            testTDZ();
+
+            // 7️⃣ var Allows Re-declaration (Bad Practice)
+            var x = "First Declaration";
+            var x = "Second Declaration";  // ✅ No error (Overwritten)
+            console.log(x);
+
+            // let y = "First Declaration";
+            // let y = "Second Declaration";  // ❌ SyntaxError (Good practice!)
+        }
+    </script>
+</body>
+</html>
