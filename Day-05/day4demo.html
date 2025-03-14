@@ -1,0 +1,22 @@
+<script>
+    let obj={
+        name:"John",
+        age:30,
+        f1: function(){
+            console.log(this);
+            console.log("Hello",this.name,this.age);
+             function f2(){
+                console.log(this);
+                console.log("Hello",obj.name,obj.age);
+                console.log("Hello",obj.name,obj.age);
+             }
+             f2();
+             let f3=()=>{
+                console.log(this);
+                console.log("Hello",obj.name,obj.age);
+             }
+             f3();
+        }
+    }
+    obj.f1();
+</script>
