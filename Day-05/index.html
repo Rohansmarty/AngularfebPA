@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Churn Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- LOGIN PAGE -->
+    <div id="loginPage">
+        <h2>Bank Churn Prediction - Login</h2>
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="login()">Login</button>
+        <p id="loginError" style="color:red;"></p>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div id="dashboard" style="display:none;">
+        <h2>Welcome, <span id="userRole"></span></h2>
+        <nav>
+            <button onclick="showPage('customerList')">Customers</button>
+            <button onclick="showPage('reports')">Reports & Analytics</button>
+            <button onclick="showPage('adminPanel')" id="adminBtn" style="display:none;">Admin Panel</button>
+            <button onclick="logout()">Logout</button>
+        </nav>
+
+        <div id="customerList" class="page">
+            <h3>Customer List - Churn Predictions</h3>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Churn Risk</th>
+                    <th>Actions</th>
+                </tr>
+                <tbody id="customerTable"></tbody>
+            </table>
+        </div>
+
+        <div id="customerProfile" class="page" style="display:none;">
+            <h3>Customer Profile</h3>
+            <p><strong>Name:</strong> <span id="custName"></span></p>
+            <p><strong>Email:</strong> <span id="custEmail"></span></p>
+            <p><strong>Churn Risk:</strong> <span id="custRisk"></span></p>
+            <button onclick="retentionAction()">Offer Retention Plan</button>
+            <button onclick="showPage('customerList')">Back</button>
+        </div>
+
+        <div id="reports" class="page" style="display:none;">
+            <h3>Reports & Analytics</h3>
+            <canvas id="churnChart"></canvas>
+        </div>
+
+        <div id="adminPanel" class="page" style="display:none;">
+            <h3>Admin Panel - User Management</h3>
+            <p>Manage system users, churn model updates, and settings.</p>
+            <button onclick="alert('Feature coming soon!')">Manage Users</button>
+            <button onclick="alert('Feature coming soon!')">Update Model</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

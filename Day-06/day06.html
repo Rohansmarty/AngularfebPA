@@ -1,0 +1,46 @@
+<script>
+
+    let s1='rohan';
+
+    let s2= new String('rohan');
+    let s3= new String('rohan');
+
+    console.log(typeof s1,typeof s2);
+
+    console.log(s1==s2);
+    console.log(s2===s3);
+
+    let s4= '2+3+4';
+    console.log(eval(s4));
+
+
+    console.log(s3.charAt(1));
+    console.log(s3[1]);
+    console.log(s3[-1]);
+
+    let sentence = "JavaScript is amazing!";
+console.log(sentence.indexOf("is")); // Output: 11
+console.log(sentence.lastIndexOf("a")); // Output: 14
+console.log(sentence.includes("amazing")); // Output: true
+console.log(sentence.startsWith("JavaScript")); // Output: true
+console.log(sentence.endsWith("!")); // Output: true
+
+let text = "  Hello JavaScript!  ";
+console.log(text.replace("JavaScript", "JS")); // Output: "  Hello JS!  "
+console.log(text.replaceAll(" ", "-")); // Output: "--Hello-JavaScript!--"
+console.log(text.trim()); // Output: "Hello JavaScript!"
+console.log(text.trimStart()); // Output: "Hello JavaScript!  "
+console.log(text.trimEnd()); // Output: "  Hello JavaScript!"
+
+let num = 123;
+console.log(String(num)); // Output: "123"
+console.log(num.toString()); // Output: "123"
+
+
+let t = "Numbers: 1, 12, 123, 1234, 12345, 123456";
+
+console.log(t.match(/\d{4}/));    // Matches exactly 3 digits → ["123"]
+console.log(t.match(/\d{2,}/g));  // Matches 2 or more digits → ["12", "123", "1234", "12345", "123456"]
+console.log(t.match(/\d{2,4}/g)); // Matches 2 to 4 digits → ["12", "123", "1234", "1234"]
+
+</script>
