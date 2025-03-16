@@ -1,0 +1,26 @@
+<script>
+    console.log("apple".localeCompare("banana"));  // -1 (apple comes before banana)
+    console.log("apple".localeCompare("apple"));   // 0  (both are equal)
+    console.log("banana".localeCompare("apple"));  // 1  (banana comes after apple)
+    console.log("apple".localeCompare("Apple", undefined, { sensitivity: 'base' }));  // 0 (equal)
+
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+
+const arr = ["A", "B", "C"];
+for (let index in arr) {
+    console.log(index, arr[index]);  // 0 A, 1 B, 2 C
+}
+
+const ar = ["A", "B", "C"];
+for (let value of ar) {
+    console.log(value);  // A, B, C
+}
+
+
+const a = ["A", "B", "C"];
+arr.forEach((value, index) => {
+    console.log(index, value);
+});
+</script>

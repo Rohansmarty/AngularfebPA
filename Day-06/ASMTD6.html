@@ -57,7 +57,7 @@ firstnonrep();
     let s=s4.split(' ');
     let re='';
     for (let i = 0; i < s.length; i++) {
-        s[i]=s[i].charAt(0).toUpperCase()+s[i].slice(1).toLowerCase();
+        s[i]=s[i].charAt(0).toUpperCase()+s[i].slice(1).toLowerCase()+' ';
         re=re+s[i]+' ';
 
     }
@@ -69,17 +69,18 @@ titlecase();
 5. WAP to find longest word in a sentence
 	input:- 'this is javascript class'
     output:- javascript */
-function longestword(){
+/*function longestword(){
 let s5='this is javascript class';
 let re=s5.split(' ');
 re.sort((a, b) => b.length - a.length); 
 console.log(re[0]);
 document.write(`<h3>longest word is ${re[0]}</h3>`);
 }
-longestword();
+longestword(); */
 
-/*
+
 function longestword(){
+    let s5='this is javascript class';
     let s=s5.split(' ');
     let rs='';
     for (let i = 0; i < s.length; i++) {
@@ -90,7 +91,7 @@ function longestword(){
     console.log(rs);
     document.write(`<h3>longest word is ${rs}</h3>`);
 }
-longestword();*/
+longestword();
 
 /*	
 6. WAP to print Account number
@@ -123,7 +124,7 @@ function accountno(){
     console.log(re);
     document.write(`<h3>account number is ${re}</h3>`);
 }
-accountno();
+accountno(); */
 
 
    
