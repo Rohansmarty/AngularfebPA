@@ -5,7 +5,7 @@
    output: { e:3 , n:2 , t: 3 ....}
 */
 function countCharacters() {
-   str="entertainment"
+   let  str="entertainment"
    let freq = {};
    for (let char of str) {
        freq[char] = (freq[char] || 0) + 1;
@@ -18,8 +18,23 @@ countCharacters();
    input: 'hello world'
    output : 'L'
 */
+
+let str = "hello world hello";
+let obj={};
+for (let char of str) {
+   obj[char] = (obj[char] || 0) + 1;
+   }
+console.log(obj);
+//console.log(Object.keys(obj).reduce((a, b) => obj[a] > obj[b] ? a : b));
+let p=str.split(" ");
+let resu=p.reduce((obj,a)=> {
+   obj[a]=obj[a] ? obj[a]+1 : 1;
+   return obj;
+},{});
+console.log(resu["hello"]);
+
 function maxRepeatedChar() {
-   const str = "hello world";
+   let str = "hello world";
    let max = 0;
    let maxChar = '';
    for (let i = 0; i < str.length; i++) {  
@@ -119,4 +134,3 @@ console.log(isValid("([{}]"));   // false
    input:   IX    XII
    output : 9     12
 */
-

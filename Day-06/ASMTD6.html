@@ -19,13 +19,8 @@ strvse();
 	output:- 'class javascript is this'*/
 let s2='This is javascript class';
 function revword(){
-    let words=s2.split(' ');
-    let rs='';
-    for (let i=words.length-1;i>=0;i--){
-       rs=rs+ words[i]+' ';
-    }
-    console.log(rs);
-    document.write(`<h3>${rs}</h3>`);
+    let words=s2.split(' ').reverse();
+    console.log(words);
 }
 revword();
 
@@ -57,7 +52,7 @@ firstnonrep();
     let s=s4.split(' ');
     let re='';
     for (let i = 0; i < s.length; i++) {
-        s[i]=s[i].charAt(0).toUpperCase()+s[i].slice(1).toLowerCase()+' ';
+        s[i]=s[i].charAt(0).toUpperCase()+s[i].slice(1).toLowerCase();
         re=re+s[i]+' ';
 
     }

@@ -107,7 +107,8 @@ console.log(oll); */
 		'alok' : [{}]
 	}
 */
-
+let groupdedData = Object.groupBy(employees, (emp) => emp.gender);
+    console.log(groupdedData)
 
 
 /*
