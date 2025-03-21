@@ -1,6 +1,6 @@
 
 const BankAccount = (function() {
-    let balance = 1000;  // Private variable
+    let balance = 1000; 
 
     return {
         deposit: function(amount) {
@@ -22,7 +22,7 @@ console.log(BankAccount.getBalance()); // 1500
 console.log(BankAccount.balance); // undefined (can't access directly)
 
 
-const numbers = { num1: 8, num2: 12 };
+let numbers = { num1: 8, num2: 12 };
 
 function addNumbers(x, y) {
     console.log(this.num1 + this.num2 + x + y);
